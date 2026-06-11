@@ -1,5 +1,3 @@
-import "./Running Hell.mp3" as runningHell;
-
 const canvas = document.getElementById("renderCanvas"); // Get the canvas element
 const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
@@ -15,7 +13,7 @@ const createScene = function () {
         await audioEngine.unlockAsync();
 
         // Audio engine is ready to play sounds ...
-        BABYLON.CreateStreamingSoundAsync("Running Hell", runningHell, { loop: true, autoplay: true }, audioEngine);
+        BABYLON.CreateStreamingSoundAsync("Running Hell", "./Running Hell.mp3", { loop: true, autoplay: true }, audioEngine);
     }
 
     initAudio();
